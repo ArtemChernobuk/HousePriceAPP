@@ -1,5 +1,7 @@
 # HousePriceAPP
-Веб-приложение для предсказание цены недвижимости по основным характеристикам при помощи градиентного бустинга
+Веб-приложение для предсказания цены недвижимости по основным характеристикам при помощи градиентного бустинга
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./preview/desktop.png)
 ## Локальный запуск
 Для загрузки образа используйте команду:
 ```
