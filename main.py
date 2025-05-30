@@ -2,6 +2,36 @@ import flet as ft
 import inference
 import pandas as pd
 import datetime
+import os
+import sqlite3
+
+def run_base_sql(base_sql_path, db_path):
+  if not os.path.exists(db_path):
+    try:
+      conn = sqlite3.connect(db_path)
+      cursor = conn.cursor()
+
+      with open(base_sql_path, 'r') as f:
+        sql_script = f.read()
+
+      cursor.executescript(sql_script)
+      conn.commit()
+
+    except Exception as e:
+
+
+      if conn:
+        conn.close()
+
+
+
+
+# Пример использования:
+base_sql_path = 'base.sql'
+db_path = 'base.db'
+
+run_base_sql(base_sql_path, db_path)
+
 
 def main(page: ft.Page):
     # Настройки страницы
